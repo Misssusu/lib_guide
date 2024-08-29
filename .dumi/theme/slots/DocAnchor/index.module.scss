@@ -1,0 +1,23 @@
+.anchorToc {
+  scrollbar-width: thin;
+  scrollbar-color: unset;
+}
+.tocWrapper {
+  position: fixed;
+  top: 96px;
+  inset-inline-end: 0;
+  width: 160px;
+  padding: 8px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-inline-end: calc(16px - 100vw + 100%);
+  z-index: 10;
+}
+.tocWrapper > div {
+  box-sizing: border-box;
+  width: 100%;
+  max-height: calc(100vh - 128px) !important;
+  margin: auto;
+  overflow: auto;
+  padding: 4px;
+}

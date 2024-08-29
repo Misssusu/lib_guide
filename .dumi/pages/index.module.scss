@@ -1,0 +1,30 @@
+.homePage {
+  height: calc(100vh - 65px);
+  padding-top: 180px;
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+    pointer-events: none;
+    background: no-repeat center / cover;
+    background-image: url('../images/home.png');
+  }
+  .title {
+    margin: 0 0 32px;
+    color: #83cdf8;
+    font-size: 140px;
+    line-height: 1;
+  }
+  .des {
+    font-size: 21px;
+    margin: 60px 0;
+  }
+}

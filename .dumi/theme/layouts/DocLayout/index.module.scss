@@ -1,0 +1,162 @@
+.demo-logo {
+  width: 120px;
+  min-width: 120px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  margin-inline-end: 24px;
+}
+
+.demo-logo-vertical {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: unset;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+:global {
+  .dumi-default-table {
+    .dumi-default-table-content {
+      table {
+        width: 100%;
+        margin: 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+        font-size: 12px;
+        border: 1px solid rgba(5, 5, 5, 0.06);
+        border-width: 0 1px;
+        border-collapse: collapse;
+        border-spacing: 0;
+        direction: ltr;
+        empty-cells: show;
+
+        th {
+          padding: 12px 24px;
+          text-align: left;
+          color: #5c6b77;
+          font-weight: 500;
+          white-space: nowrap;
+          background: rgba(0, 0, 0, 0.02);
+          border-left: 1px solid rgba(5, 5, 5, 0.06);
+          border: 1px solid rgba(5, 5, 5, 0.06);
+          border-width: 1px 0 2px;
+          font-size: 14px;
+        }
+
+        td {
+          padding: 12px 24px;
+          text-align: left;
+          border: 1px solid rgba(5, 5, 5, 0.06);
+          border-width: 1px 0;
+          font-size: 13px;
+          &:first-child {
+            width: 18%;
+            min-width: 58px;
+            color: rgba(0, 0, 0, 0.88);
+            font-weight: 600;
+            white-space: nowrap;
+            font-size: 13px;
+          }
+
+          &:nth-child(2) {
+            min-width: 160px;
+          }
+
+          &:nth-child(3) {
+            width: 22%;
+            color: #c41d7f;
+            font-size: 13px;
+          }
+
+          &:nth-child(4) {
+            width: 15%;
+            font-size: 13px;
+          }
+
+          &:nth-child(5) {
+            width: 8%;
+            font-size: 13px;
+          }
+
+          &:nth-last-child(3):first-child {
+            width: 38%;
+          }
+
+          &:nth-last-child(3):first-child ~ td:nth-last-child(2) {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+  .markdown code {
+    margin: 0 1px;
+    padding: 0.2em 0.4em;
+    font-size: 0.9em;
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(5, 5, 5, 0.06);
+    border-radius: 4px;
+  }
+}
+
+.layout_header,
+.layout_sider {
+  background: #fff !important;
+}
+
+.layout_sider {
+  overflow: hidden;
+  height: 100%;
+  position: fixed !important;
+  inset-inline-start: 0;
+  top: 80px;
+  bottom: 0;
+  padding-bottom: 80px;
+  :global {
+    .ant-layout-sider-children {
+      overflow: hidden;
+      height: 100%;
+      .ant-menu {
+        padding-bottom: 30px;
+      }
+      &:hover {
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: unset;
+      }
+    }
+  }
+}
+
+.layout_header {
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.layout_content {
+  background: #fff !important;
+  padding: 0 50px 0 80px;
+  .component_content {
+    width: 80%;
+  }
+}
+
+.components {
+  margin-top: 40px;
+  background: #fff;
+}
